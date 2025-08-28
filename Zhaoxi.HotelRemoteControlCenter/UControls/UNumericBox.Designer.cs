@@ -1,0 +1,58 @@
+﻿namespace Zhaoxi.HotelRemoteControlCenter.UControls
+{
+    partial class UNumericBox
+    {
+        /// <summary> 
+        /// 必需的设计器变量。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// 清理所有正在使用的资源。
+        /// </summary>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region 组件设计器生成的代码
+
+        /// <summary> 
+        /// 设计器支持所需的方法 - 不要修改
+        /// 使用代码编辑器修改此方法的内容。
+        /// </summary>
+        private void InitializeComponent()
+        {
+            panelNumbers = new Panel();
+            SuspendLayout();
+            // 
+            // panelNumbers
+            // 
+            panelNumbers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelNumbers.Location = new Point(3, 3);
+            panelNumbers.Name = "panelNumbers";
+            panelNumbers.Padding = new Padding(3);
+            panelNumbers.Size = new Size(145, 44);
+            panelNumbers.TabIndex = 0;
+            // 
+            // UNumericBox
+            // 
+            AutoScaleMode = AutoScaleMode.Inherit;
+            BackColor = Color.Silver;
+            Controls.Add(panelNumbers);
+            Name = "UNumericBox";
+            Size = new Size(151, 50);
+            SizeChanged += UNumericBox_SizeChanged;
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private Panel panelNumbers;
+    }
+}

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="FrmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmHotelCenterMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UControls\CircleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UControls\ParaTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UControls\UCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UControls\UCRoomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UControls\ULightSwitch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UControls\UNumericBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UControls\UPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UControls\USquareSwitch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UControls\USwitch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UControls\VParaTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
