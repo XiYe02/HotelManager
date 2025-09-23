@@ -37,3 +37,43 @@ D:\工作\Winform上位机录制\酒店远程监控平台录制\酒店项目文�
 D:\工作\Winform上位机录制\酒店远程监控平台录制\酒店项目文件夹\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\NPOI.OpenXmlFormats.dll
 D:\工作\Winform上位机录制\酒店远程监控平台录制\酒店项目文件夹\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\ICSharpCode.SharpZipLib.dll
 D:\工作\Winform上位机录制\酒店远程监控平台录制\酒店项目文件夹\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\NOTICE.TXT
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.exe
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.deps.json
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.runtimeconfig.json
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.dll
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.pdb
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\NPOI.OOXML.dll
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\NPOI.dll
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\NPOI.OpenXml4Net.dll
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\NPOI.OpenXmlFormats.dll
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\S7.Net.dll
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\bin\Debug\net6.0-windows\ICSharpCode.SharpZipLib.dll
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.csproj.AssemblyReference.cache
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.FrmConfig.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.FrmHotelCenterMain.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.FrmRooms.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.Properties.Resources.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.UControls.CircleButton.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.UControls.ParaTextBox.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.UControls.UCircle.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.UControls.UCRoomControl.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.UControls.ULightSwitch.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.UControls.UNumericBox.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.UControls.UPanel.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.UControls.USquareSwitch.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.UControls.USwitch.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.UControls.VParaTextBox.resources
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.csproj.GenerateResource.cache
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.GeneratedMSBuildEditorConfig.editorconfig
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.AssemblyInfoInputs.cache
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.AssemblyInfo.cs
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.csproj.CoreCompileInputs.cache
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.sourcelink.json
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.H.DDDEC39A.Up2Date
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.dll
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\refint\Zhaoxi.HotelRemoteControlCenter.dll
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.pdb
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\Zhaoxi.HotelRemoteControlCenter.genruntimeconfig.cache
+F:\StudyDate\CsharpDate\ScharpProject\67 楼栋切换功能\Zhaoxi.HRCC\Zhaoxi.HotelRemoteControlCenter\obj\Debug\net6.0-windows\ref\Zhaoxi.HotelRemoteControlCenter.dll

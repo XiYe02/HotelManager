@@ -143,7 +143,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                         MessageHelper.Success("客户退房", "退房成功！");
                     }
 
-
+                    //页面改变
                     if (roomInfo.CheckIn != oldState)
                     {
                         //刷新操作列表呈现
@@ -164,18 +164,20 @@ namespace Zhaoxi.HotelRemoteControlCenter
         //刷新操作列表呈现
         private void UpdateCheckCells(int index, bool checkIn)
         {
-            if (checkIn)
+            if (checkIn)//入住样式
             {
+               //入住列样式
                 var checkCell = dgvRoomList.Rows[index].Cells["colCheck"] as DataGridViewLinkCell;
                 checkCell.ReadOnly = true;
                 checkCell.ActiveLinkColor = Color.Gray;
                 checkCell.LinkColor = Color.Gray;
+                //退房列样式
                 var checkOutCell = dgvRoomList.Rows[index].Cells["colCheckOut"] as DataGridViewLinkCell;
                 checkOutCell.ReadOnly = false;
                 checkOutCell.ActiveLinkColor = Color.DarkRed;
                 checkOutCell.LinkColor = Color.DarkRed;
             }
-            else
+            else//未入住样式
             {
                 var checkCell = dgvRoomList.Rows[index].Cells["colCheck"] as DataGridViewLinkCell;
                 checkCell.ReadOnly = false;

@@ -57,7 +57,7 @@ namespace Zhaoxi.HotelRemoteControlCenter.Utils
             plc = new Plc(cpuType, ip, port, rack, slot);
         }
 
-       //加载房间信息列表
+       //加载房间信息列表--用于主页显示房间信息
         public static void LoadRoomList()
         {
             if(File.Exists(roomFilePath))
@@ -77,6 +77,11 @@ namespace Zhaoxi.HotelRemoteControlCenter.Utils
             }
         }
 
+        /// <summary>
+        /// 将状态写入PLC
+        /// </summary>
+        /// <param name="addr"></param>
+        /// <param name="checkIn"></param>
         public static void SetRoomCheckIn(string addr,bool checkIn)
         {
             if(!plc.IsConnected)

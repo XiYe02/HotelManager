@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Zhaoxi.HotelRemoteControlCenter.Models
 {
+    /// <summary>
+    /// 房间设置信息--用于URoomControl
+    /// </summary>
     public class RoomSetInfo
     {
         public int RoomId { get; set; }

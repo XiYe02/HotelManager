@@ -140,7 +140,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 string fileName = ofd.FileName;
-                //Excel文件导入
+                //Excel文件导入 
                 DataTable dt = ExcelHelper.ExcelToDataTable(fileName, "Sheet1", true);
                 if (dt != null && dt.Rows.Count > 0)
                 {

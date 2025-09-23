@@ -16,7 +16,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
 
         private void FrmHotelCenterMain_Paint(object sender, PaintEventArgs e)
         {
-            PaintClass.Paint(this, e);
+            PaintClass.Paint(this, e);//圆角窗体的绘制
         }
 
         #region 窗体尺寸调整
@@ -225,6 +225,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
         {
             List<string> buildings = CommonHelper.roomList.Select(r => r.Building).Distinct().ToList();//楼栋列表
             flpBuildings.Controls.Clear();//清空容器
+            //添加楼栋标签
             foreach (string building in buildings)
             {
                 Label lbl = new Label();
@@ -238,6 +239,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                 lbl.Click += Lbl_Click;
                 flpBuildings.Controls.Add(lbl);
             }
+            //默认选择第一个楼栋
             if (buildings.Count > 0)
             {
                 selBuilding = buildings[0];
@@ -249,11 +251,15 @@ namespace Zhaoxi.HotelRemoteControlCenter
             }
         }
 
+        /// <summary>
+        /// 统计当前选择楼栋的数据，并展示在页面
+        /// </summary>
+        /// <param name="building"></param>
         private void StatisticsSelectBuilding(string building)
         {
-            selRoomList = CommonHelper.roomList.Where(r => r.Building == building).ToList();
+            selRoomList = CommonHelper.roomList.Where(r => r.Building == building).ToList();//当前楼栋的房间列表
             roomIds = selRoomList.Select(r => r.RoomId).ToList();
-            selSetList = CommonHelper.roomSetList.Where(s => roomIds.Contains(s.RoomId)).ToList();
+            selSetList = CommonHelper.roomSetList.Where(s => roomIds.Contains(s.RoomId)).ToList();//当前楼栋的房间参数列表
             var list = selRoomList;
             //总房间数
             int totalCount = list.Count;
@@ -325,7 +331,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                             roomControl.InitData(roomData, setInfo);//初始化房间信息与参数配置信息
 
                             //房间选择事件
-                            roomControl.RoomSelected += RoomControl_RoomSelected;
+                            roomControl.RoomSelected += RoomControl_RoomSelected;//当选择房间得时候，刷新右侧的控制面板
                             flpRoomList.Controls.Add(roomControl);
                         }
                     }
@@ -460,7 +466,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                             foreach (RoomInfo room in selRoomList)
                             {
                                 RoomSetInfo setInfo = selSetList.Find(s => s.RoomId == room.RoomId);
-                                if (room.CheckIn && setInfo != null)
+                                if (room.CheckIn && setInfo != null)//已入住的房间信息
                                 {
                                     string addr = setInfo.RSAddr;
                                     CommonHelper.SetRoomCheckIn(addr, true);

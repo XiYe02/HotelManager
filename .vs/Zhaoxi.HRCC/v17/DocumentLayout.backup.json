@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\LifeDate\\BaiduDate\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\",
+  "WorkspaceRootPath": "F:\\StudyDate\\CsharpDate\\ScharpProject\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E63B2DCD-F286-430D-95C8-3B45DB5AEB27}|Zhaoxi.HotelRemoteControlCenter\\Zhaoxi.HotelRemoteControlCenter.csproj|f:\\lifedate\\baidudate\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\zhaoxi.hrcc\\zhaoxi.hotelremotecontrolcenter\\frmhotelcentermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E63B2DCD-F286-430D-95C8-3B45DB5AEB27}|Zhaoxi.HotelRemoteControlCenter\\Zhaoxi.HotelRemoteControlCenter.csproj|f:\\studydate\\csharpdate\\scharpproject\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\zhaoxi.hrcc\\zhaoxi.hotelremotecontrolcenter\\frmhotelcentermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E63B2DCD-F286-430D-95C8-3B45DB5AEB27}|Zhaoxi.HotelRemoteControlCenter\\Zhaoxi.HotelRemoteControlCenter.csproj|solutionrelative:zhaoxi.hotelremotecontrolcenter\\frmhotelcentermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E63B2DCD-F286-430D-95C8-3B45DB5AEB27}|Zhaoxi.HotelRemoteControlCenter\\Zhaoxi.HotelRemoteControlCenter.csproj|F:\\LifeDate\\BaiduDate\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\zhaoxi.hotelremotecontrolcenter\\frmhotelcentermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E63B2DCD-F286-430D-95C8-3B45DB5AEB27}|Zhaoxi.HotelRemoteControlCenter\\Zhaoxi.HotelRemoteControlCenter.csproj|F:\\StudyDate\\CsharpDate\\ScharpProject\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\zhaoxi.hotelremotecontrolcenter\\frmhotelcentermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E63B2DCD-F286-430D-95C8-3B45DB5AEB27}|Zhaoxi.HotelRemoteControlCenter\\Zhaoxi.HotelRemoteControlCenter.csproj|solutionrelative:zhaoxi.hotelremotecontrolcenter\\frmhotelcentermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,32 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmHotelCenterMain.cs [Design]",
-              "DocumentMoniker": "F:\\LifeDate\\BaiduDate\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs",
-              "RelativeDocumentMoniker": "Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs",
-              "ToolTip": "F:\\LifeDate\\BaiduDate\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs [Design]",
-              "RelativeToolTip": "Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T03:59:32.935Z",
-              "EditorCaption": " [Design]"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "FrmHotelCenterMain.cs",
-              "DocumentMoniker": "F:\\LifeDate\\BaiduDate\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs",
+              "DocumentMoniker": "F:\\StudyDate\\CsharpDate\\ScharpProject\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs",
               "RelativeDocumentMoniker": "Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs",
-              "ToolTip": "F:\\LifeDate\\BaiduDate\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs",
+              "ToolTip": "F:\\StudyDate\\CsharpDate\\ScharpProject\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs",
               "RelativeToolTip": "Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMMAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAPkBAAAAAAAAAAAQwAgCAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T03:59:32.981Z",
+              "WhenOpened": "2025-09-14T15:32:14.855Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmHotelCenterMain.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "F:\\StudyDate\\CsharpDate\\ScharpProject\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs",
+              "RelativeDocumentMoniker": "Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs",
+              "ToolTip": "F:\\StudyDate\\CsharpDate\\ScharpProject\\67 \u697C\u680B\u5207\u6362\u529F\u80FD\\Zhaoxi.HRCC\\Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "Zhaoxi.HotelRemoteControlCenter\\FrmHotelCenterMain.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T15:32:12.17Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
             }
           ]
         }
