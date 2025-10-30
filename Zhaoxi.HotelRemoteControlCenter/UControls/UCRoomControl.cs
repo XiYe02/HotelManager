@@ -19,7 +19,7 @@ namespace Zhaoxi.HotelRemoteControlCenter.UControls
             InitializeComponent();
         }
         //事件：房间选择事件
-        public event EventHandler RoomSelected;//房间选择事件
+        public event EventHandler RoomSelected;//房间选择事件--当房间被选中时，改变右侧的房间信息显示
         //属性：房间编号、房间号、入住状态、电源状态、房间温度、湿度、CO2、背景色1、背景色2、渐变模式、边框颜色、圆角度、选择状态、房间信息属性、设置信息、
         #region 属性
         //房间编号
@@ -163,7 +163,7 @@ namespace Zhaoxi.HotelRemoteControlCenter.UControls
         }
 
         //房间设置信息
-        public RoomSetInfo RoomSet { get; set; }
+        public RoomSetInfo RoomSet { get; set; }//用于刷新房间设置信息，主页面356
 
         #endregion
 

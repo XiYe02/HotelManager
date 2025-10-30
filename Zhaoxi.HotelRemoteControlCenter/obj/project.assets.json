@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {
+    "net8.0-windows7.0": {
       "DotNetCore.NPOI/1.2.3": {
         "type": "package",
         "dependencies": {
@@ -105,12 +105,12 @@
       "S7netplus/0.20.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/S7.Net.dll": {
+          "lib/net7.0/S7.Net.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/S7.Net.dll": {
+          "lib/net7.0/S7.Net.dll": {
             "related": ".xml"
           }
         }
@@ -462,7 +462,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": [
+    "net8.0-windows7.0": [
       "DotNetCore.NPOI >= 1.2.3",
       "Newtonsoft.Json >= 13.0.3",
       "S7netplus >= 0.20.0"
@@ -485,7 +485,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net8.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -493,8 +493,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
           "projectReferences": {}
         }
       },
@@ -510,8 +510,8 @@
       }
     },
     "frameworks": {
-      "net6.0-windows7.0": {
-        "targetAlias": "net6.0-windows",
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
         "dependencies": {
           "DotNetCore.NPOI": {
             "target": "Package",
@@ -545,7 +545,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

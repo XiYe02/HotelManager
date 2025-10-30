@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Zhaoxi.HotelRemoteControlCenter.Models
 {
     /// <summary>
-    /// 房间设置信息--用于URoomControl
+    /// 房间设置信息,主要保存房间状态数据的地址--用于URoomControl
     /// </summary>
     public class RoomSetInfo
     {

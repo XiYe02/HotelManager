@@ -26,7 +26,8 @@ namespace Zhaoxi.HotelRemoteControlCenter
             if (!Directory.Exists(CommonHelper.dirFile))
                 Directory.CreateDirectory(CommonHelper.dirFile);
             cboBuildings.SelectedIndex = 0;
-            //没有plc配置
+
+            //加载PLC配置信息
             if (CommonHelper.plcInfo == null)
             {
                 cboCpuTypes.SelectedIndex = 0;
@@ -45,7 +46,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                 txtRack.Text = plcInfo.Rack.ToString();
                 txtSlot.Text = plcInfo.Slot.ToString();
             }
-            //房间下拉列表加载
+            //房间下拉列表加载，房间配置信息加载
             if (CommonHelper.roomList.Count > 0)
             {
                 //var setIds=CommonHelper.roomSetList.Select(r=>r.RoomId).ToList();
@@ -54,7 +55,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                 var list = CommonHelper.roomList;
                 cboRooms.DataSource = list;
                 cboRooms.SelectedIndex = 0;
-                RoomSetInfo setInfo = CommonHelper.roomSetList.Find(r => r.RoomId == list[0].RoomId);
+                RoomSetInfo setInfo = CommonHelper.roomSetList.Find(r => r.RoomId == list[0].RoomId);//根据房间ID，找到对应的房间配置信息
                 if (setInfo != null)
                 {
                     txtStateAddrs.Text = setInfo.PSAddr + "," + setInfo.FSAddr + "," + setInfo.BRLSAddr + "," + setInfo.RSAddr;
@@ -91,7 +92,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
             {
                 string plcAllString = File.ReadAllText(CommonHelper.communicatePath);
                 string[] plcArr = plcAllString.Split('|');
-                bool blExist = false;
+                bool blExist = false;//判断新的栋楼是否已经存在
                 for (int i = 0; i < plcArr.Length; i++)
                 {
                     if (plcArr[i].Contains(building))
@@ -104,11 +105,11 @@ namespace Zhaoxi.HotelRemoteControlCenter
                 string newSetStr = "";
                 if (blExist)
                 {
-                    newSetStr = string.Join("|", plcArr);
+                    newSetStr = string.Join("|", plcArr);//将拆分的字符串重新组合
                 }
                 else
                 {
-                    newSetStr = plcAllString + "|" + setPlcStr;
+                    newSetStr = plcAllString + "|" + setPlcStr;//添加新的楼栋
                 }
                 File.WriteAllText(CommonHelper.communicatePath, newSetStr);//再次写入文件
 
@@ -128,18 +129,18 @@ namespace Zhaoxi.HotelRemoteControlCenter
                     Rack = rack.GetShort(),
                     Slot = slot.GetShort()
                 };
-                CommonHelper.IsCommunicateUpdated = true;
+                CommonHelper.IsCommunicateUpdated = true;//更新PLC配置信息
             }
         }
 
         //参数配置导入
         private void btnImport_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+            OpenFileDialog ofd = new OpenFileDialog();//打开文件对话框
             ofd.Filter = "Excel Files (*.xlsx)|*.xlsx| Excel Files 2003 (*.xls)|*.xls";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                string fileName = ofd.FileName;
+                string fileName = ofd.FileName;//选择的Excle文件是RoomParaASet文件的数据
                 //Excel文件导入 
                 DataTable dt = ExcelHelper.ExcelToDataTable(fileName, "Sheet1", true);
                 if (dt != null && dt.Rows.Count > 0)
@@ -155,23 +156,23 @@ namespace Zhaoxi.HotelRemoteControlCenter
                         if (stateAddrs.Length > 0)
                         {
                             string[] states = stateAddrs.Split(',');
-                            setInfo.PSAddr = states[0];
-                            setInfo.FSAddr = states[1];
-                            setInfo.BRLSAddr = states[2];
-                            setInfo.RSAddr = states[3];
+                            setInfo.PSAddr = states[0];//电源
+                            setInfo.FSAddr = states[1];//风扇
+                            setInfo.BRLSAddr = states[2];//卧室
+                            setInfo.RSAddr = states[3];//房间
                         }
                         string dataAddrs = row["房间数据地址"].ToString().Trim();
                         if (dataAddrs.Length > 0)
                         {
                             string[] addrs = dataAddrs.Split(',');
-                            setInfo.FSTemperAddr = addrs[0];
-                            setInfo.RTemperAddr = addrs[1];
-                            setInfo.RHumidityAddr = addrs[2];
-                            setInfo.CO2Addr = addrs[3];
-                            setInfo.BRLGradeAddr = addrs[4];
+                            setInfo.FSTemperAddr = addrs[0];//风扇温度
+                            setInfo.RTemperAddr = addrs[1];//房间温度
+                            setInfo.RHumidityAddr = addrs[2];//湿度
+                            setInfo.CO2Addr = addrs[3];//二氧化碳
+                            setInfo.BRLGradeAddr = addrs[4];//卧室灯光
                         }
                         if (CommonHelper.roomSetList.Find(s => s.RoomId == setInfo.RoomId) == null)
-                            CommonHelper.roomSetList.Add(setInfo);
+                            CommonHelper.roomSetList.Add(setInfo);//不存在的房间信息，用于写入文件
                         i++;
                     }
                     if (dt.Rows.Count == i)
@@ -191,6 +192,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
             CommonHelper.IsRoomSetsUpdated = true;//更新房间配置
         }
 
+        //房间配置导出楼栋信息--从Communicattion文件中读取
         private void cboBuildings_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (File.Exists(CommonHelper.communicatePath))
@@ -217,13 +219,14 @@ namespace Zhaoxi.HotelRemoteControlCenter
                 }
             }
         }
-
+        
+        //房间信息加载---从房间参数实体类中读取
         private void cboRooms_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboRooms.SelectedValue != null)
             {
                 int roomId = cboRooms.SelectedValue.ToString().GetInt();
-                RoomSetInfo setInfo = CommonHelper.roomSetList.Find(s => s.RoomId == roomId);
+                RoomSetInfo setInfo = CommonHelper.roomSetList.Find(s => s.RoomId == roomId);//主页面开始会加载
                 if (setInfo != null)
                 {
                     txtStateAddrs.Text = setInfo.PSAddr + "," + setInfo.FSAddr + "," + setInfo.BRLSAddr + "," + setInfo.RSAddr;
@@ -287,7 +290,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                 setInfo.CO2Addr = addrs[3];
                 setInfo.BRLGradeAddr = addrs[4];
             }
-            RoomSetInfo oldSetInfo=CommonHelper.roomSetList.Find(s=>s.RoomId == roomId);
+            RoomSetInfo oldSetInfo=CommonHelper.roomSetList.Find(s=>s.RoomId == roomId);//根据房间ID找到对应的数据
             if (oldSetInfo!=null)
             {
                 int index = CommonHelper.roomSetList.IndexOf(oldSetInfo);

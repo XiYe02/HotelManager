@@ -138,9 +138,9 @@ namespace Zhaoxi.HotelRemoteControlCenter
             frmRooms.ShowDialog();
             if (CommonHelper.IsRoomsUpdated)
             {
-                StatisticsSelectBuilding(selBuilding);
+                StatisticsSelectBuilding(selBuilding);//重新统计当前选择楼栋的房间数据
                 //重新加载房间监控列表
-                LoadRooms();
+                LoadRooms();//房间用户控件的加载
             }
         }
 
@@ -166,7 +166,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                 foreach (Control c in flpRoomList.Controls)
                 {
                     UCRoomControl roomControl = c as UCRoomControl;
-                    roomControl.RoomSet = CommonHelper.roomSetList.Find(s => s.RoomId == roomControl.RoomId);
+                    roomControl.RoomSet = CommonHelper.roomSetList.Find(s => s.RoomId == roomControl.RoomId);//更新用户控件
                 }
             }
         }
@@ -189,19 +189,22 @@ namespace Zhaoxi.HotelRemoteControlCenter
             CommonHelper.LoadRoomSetList();
             //统计酒店总数据
             StatisticsRoomsData();
+            //在酒店客房修改页面，修改完成后，用于重新加载主页面
             CommonHelper.ReloadStatisticsData = () =>
             {
-                StatisticsRoomsData();
-                StatisticsSelectBuilding(selBuilding);
+                StatisticsRoomsData();//所有房间的数据入住信息
+                StatisticsSelectBuilding(selBuilding);//加载当前楼栋的房间数据
             };
             //加载楼栋列表
             LoadBuidings();
-            //加载当前楼栋的房间列表
-            LoadRooms();
+
+            LoadRooms();//（重要）将房间信息的地址加载到房间列表用户控件中，将房间参数的配置信息的地址加载到右侧的房间控制面板的控制控件中
+
             //初始化通信设置
             InitCommunication();
+
             //初始化定时器
-            InitTimers();
+            InitTimers();//（重要）每秒根据控件存储的地址，读取PLC数据，并更新房间信息
         }
 
 
@@ -223,7 +226,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
 
         private void LoadBuidings()
         {
-            List<string> buildings = CommonHelper.roomList.Select(r => r.Building).Distinct().ToList();//楼栋列表
+            List<string> buildings = CommonHelper.roomList.Select(r => r.Building).Distinct().ToList();//包好所有楼栋的列表
             flpBuildings.Controls.Clear();//清空容器
             //添加楼栋标签
             foreach (string building in buildings)
@@ -281,7 +284,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
             string building = (sender as Label).Text;
             selBuilding = building;//切换当前楼栋
             CommonHelper.selectBuilding = selBuilding;
-            if(plc.IsConnected)
+            if (plc.IsConnected)
             {
                 readTimer.Stop();
                 plc.Close();
@@ -292,17 +295,17 @@ namespace Zhaoxi.HotelRemoteControlCenter
                 btnStart.BgColor2 = Color.Teal;
                 lblState.ForeColor = Color.Red;
             }
-            InitCommunication();
+            InitCommunication();//初始化PLC通信设置
             lblBuilding.Text = selBuilding;
-            foreach(Control c in flpBuildings.Controls)
+            foreach (Control c in flpBuildings.Controls)
             {
                 if (c.Text == selBuilding)
                     c.ForeColor = Color.DeepSkyBlue;
                 else
                     c.ForeColor = Color.LightSeaGreen;
             }
-            StatisticsSelectBuilding(selBuilding);
-            LoadRooms();
+            StatisticsSelectBuilding(selBuilding);//统计楼栋房间的数据
+            LoadRooms();//加载房间控件
         }
 
         //加载当前楼栋的房间列表
@@ -349,7 +352,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
             RefreshSelRoom(roomControl);
         }
 
-        //刷新选择房间的控制面板
+        //刷新选择房间的控制面板--将房间信息地址数据赋值给对应的用户控件
         private void RefreshSelRoom(UCRoomControl uCRoom)
         {
             RoomData data = uCRoom.RoomData;
@@ -373,7 +376,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                     cirState.ForeColor = Color.Red;
                 }
                 swPower.Checked = data.PSState;//通电状态
-                swPower.Tag = setInfo.PSAddr;//绑定通电状态地址
+                swPower.Tag = setInfo.PSAddr;//绑定通电状态地址--用于改变PLC的数据
 
                 bdRoomCtrol.IsOn = data.RoomLightState;//吊灯的状态
                 bdRoomCtrol.LightGrade = data.RoomLightGrade;//灯的强度
@@ -381,7 +384,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                 bdRoomCtrol.GradeAddr = setInfo.BRLGradeAddr;//灯光强度地址
 
                 swFan.Checked = data.FanState;//风机状态
-                swFan.Tag = setInfo.FSAddr;//风机状态地址
+                swFan.Tag = setInfo.FSAddr;//风机状态地址--用于改变PLC的数据
                 txtSetTemperature.Value = data.SetTemperature;//风机温度
                 txtSetTemperature.ParaName = setInfo.FSTemperAddr;//设置温度地址
 
@@ -543,10 +546,10 @@ namespace Zhaoxi.HotelRemoteControlCenter
                         UCRoomControl roomControl = c as UCRoomControl;
                         if (dicDatas.ContainsKey(roomControl.RoomId))
                         {
-                            roomControl.RoomData = dicDatas[roomControl.RoomId];
+                            roomControl.RoomData = dicDatas[roomControl.RoomId];//更新控件信息
                             if (roomControl.IsSelected)
                             {
-                                RefreshSelRoom(roomControl);
+                                RefreshSelRoom(roomControl); //刷新选择房间的控制面板
                             }
                         }
                     }
@@ -624,6 +627,11 @@ namespace Zhaoxi.HotelRemoteControlCenter
             readTimer.Start();
             txtSetTemperature.Value = setTemperVal.ToString("0.0").GetDecimal();
             gbSet.Visible = false;
+        }
+
+        private void lblCheckState_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

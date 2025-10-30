@@ -90,7 +90,7 @@ namespace Zhaoxi.HotelRemoteControlCenter.Utils
             }
             if(plc.IsConnected)
             {
-                plc.Write(addr, checkIn);
+                plc.Write(addr, checkIn);//写入PLC，用于房间入住状态的改变
             }
         }
     }

@@ -1038,6 +1038,7 @@
             lblCheckState.TabIndex = 13;
             lblCheckState.Text = "空余";
             lblCheckState.TextAlign = ContentAlignment.MiddleCenter;
+            lblCheckState.Click += lblCheckState_Click;
             // 
             // label24
             // 

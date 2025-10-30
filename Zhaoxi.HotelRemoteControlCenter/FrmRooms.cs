@@ -83,7 +83,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                 else
                     dgvRoomList.DataSource = CommonHelper.roomList;
 
-                UpdateList();
+                UpdateList();//刷新操作列表呈现
 
             }
             else
@@ -95,7 +95,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
             for (int i = 0; i < dgvRoomList.Rows.Count; i++)
             {
                 RoomInfo roomInfo = dgvRoomList.Rows[i].DataBoundItem as RoomInfo;
-                UpdateCheckCells(i, roomInfo.CheckIn);
+                UpdateCheckCells(i, roomInfo.CheckIn);//根据房间状态显示不同的样式
             }
         }
 
@@ -117,7 +117,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                 {
                     roomStateAddr = setInfo.RSAddr;//入住状态地址
                 }
-                if (cell.ReadOnly == false)
+                if (cell.ReadOnly == false)//确定点击的是操作列
                 {
                     bool oldState = roomInfo.CheckIn;
                     if (cellText == "入住")
@@ -125,7 +125,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                         if (roomStateAddr != "")
                         {
                             //写状态
-                            CommonHelper.SetRoomCheckIn(roomStateAddr, true);
+                            CommonHelper.SetRoomCheckIn(roomStateAddr, true);//写入PLC
                             roomInfo.CheckIn = true;
                             MessageHelper.Success("客户入住", "入住成功！");
                         }
@@ -147,7 +147,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
                     if (roomInfo.CheckIn != oldState)
                     {
                         //刷新操作列表呈现
-                        UpdateCheckCells(e.RowIndex, roomInfo.CheckIn);
+                        UpdateCheckCells(e.RowIndex, roomInfo.CheckIn);//根据房间状态显示不同的样式
                         dgvRoomList.Refresh();
                         //更新到文件中----房间信息文件中
                         string json = JsonConvert.SerializeObject(CommonHelper.roomList);
@@ -167,7 +167,7 @@ namespace Zhaoxi.HotelRemoteControlCenter
             if (checkIn)//入住样式
             {
                //入住列样式
-                var checkCell = dgvRoomList.Rows[index].Cells["colCheck"] as DataGridViewLinkCell;
+                var checkCell = dgvRoomList.Rows[index].Cells["colCheck"] as DataGridViewLinkCell;//入住列
                 checkCell.ReadOnly = true;
                 checkCell.ActiveLinkColor = Color.Gray;
                 checkCell.LinkColor = Color.Gray;
